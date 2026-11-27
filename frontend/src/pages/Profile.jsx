@@ -1,0 +1,2 @@
+import {useEffect,useState} from 'react';import {get,message} from '../api/axios';
+export default function Profile(){const [data,setData]=useState(null),[error,setError]=useState('');useEffect(()=>{get('/auth/profile').then(setData).catch(e=>setError(message(e)));},[]);return <><h1>Profil</h1><p>Informasi akun EventDesk.</p>{error?<div className="error">{error}</div>:!data?<p>Memuat...</p>:<div className="panel profile"><h2>{data.nama}</h2><p>Email: {data.email}</p><p>Role: {data.role}</p></div>}</>}
