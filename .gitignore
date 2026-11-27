@@ -1,29 +1,11 @@
-
-# Environment variables
 .env
 .env.*
 !.env.example
-
-# Go
+node_modules/
+dist/
 *.exe
 *.test
 *.out
-bin/
-vendor/
-
-# Node.js
-node_modules/
-dist/
-build/
-.vite/
-
-# Logs
 *.log
-
-# IDE
-.vscode/
-.idea/
-
-# Operating system
 .DS_Store
-Thumbs.db
+.vscode/

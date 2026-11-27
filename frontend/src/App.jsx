@@ -1,0 +1,3 @@
+import Dashboard from './pages/Dashboard';
+// Pratinjau fondasi tanpa autentikasi. Ganti dengan routing lengkap setelah kedua PR masuk.
+export default function App(){return <div className="shell"><aside className="sidebar"><div className="brand"><span className="brand-icon">E</span><div>EventDesk<small>ORGANIZATION MANAGER</small></div></div><div className="nav-label">FONDASI PROJECT</div><p style={{color:'#d8e6f4'}}>Dashboard · Divisi · Kegiatan · Tugas</p></aside><div className="main"><header className="navbar">Workspace / EventDesk — Pratinjau</header><main style={{padding:'24px'}}><Dashboard preview/></main></div></div>}
