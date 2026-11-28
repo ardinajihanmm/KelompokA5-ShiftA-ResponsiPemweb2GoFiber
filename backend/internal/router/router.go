@@ -18,7 +18,7 @@ func Setup(app *fiber.App, h handler.Handler) {
 	})
 	auth := api.Group("/auth")
 	auth.Post("/register", h.Register)
-	auth.Post("/login", h.Login)
+	auth.Post("/login", middleware.LoginRateLimit(), h.Login)
 	auth.Get("/profile", middleware.Auth(h.Secret), h.Profile)
 	secured := api.Group("", middleware.Auth(h.Secret))
 	secured.Get("/users", middleware.Admin, h.Users)
